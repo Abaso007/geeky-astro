@@ -21,11 +21,11 @@ const { about, categories, featured_posts, newsletter } = widgets;
 const { posts, className } = Astro.props;
 const catagories = await getTaxonomy("posts", "categories");
 const featuredPosts: CollectionEntry<"posts">[] = sortByDate(posts).filter(
-  (post) => post.data.featured
+  (post) => post.data.featured,
 );
 const categoriesWithPostsCount = catagories.map((category) => {
   const filteredPosts = posts.filter((post) =>
-    post.data.categories?.includes(category)
+    post.data.categories?.includes(category),
   );
   return {
     name: category,
@@ -73,14 +73,16 @@ const categoriesWithPostsCount = catagories.map((category) => {
               class={`relative mb-2 flex items-center justify-between pl-6 text-[16px] font-bold capitalize text-text-dark dark:text-darkmode-text-light ${
                 i !== catagories.length - 1 &&
                 "border-b border-border  dark:border-darkmode-border"
-              }`}>
+              }`}
+            >
               <svg
                 class="absolute left-0 top-2.5"
                 width="20px"
                 height="20px"
                 viewBox="0 0 20 20"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M11.7318 9.35984C12.0854 8.93556 12.7159 8.87824 13.1402 9.2318C13.5645 9.58537 13.6218 10.2159 13.2682 10.6402L8.26825 16.6402C7.91468 17.0645 7.28412 17.1218 6.85984 16.7682C6.43556 16.4147 6.37824 15.7841 6.7318 15.3598L11.7318 9.35984Z"
                   fill="#2ba283"
@@ -112,13 +114,15 @@ const categoriesWithPostsCount = catagories.map((category) => {
           <button
             tab-button
             tab-target="featured-tab"
-            class={`btn px-5 py-2  btn-primary`}>
+            class={`btn px-5 py-2  btn-primary`}
+          >
             Featured
           </button>
           <button
             tab-button
             tab-target="recent-tab "
-            class={`btn ml-3  px-5 py-2 btn-outline-primary`}>
+            class={`btn ml-3  px-5 py-2 btn-outline-primary`}
+          >
             Recent
           </button>
         </div>
@@ -132,7 +136,8 @@ const categoriesWithPostsCount = catagories.map((category) => {
                 class={`flex items-center pb-6 ${
                   i !== arr.length - 1 &&
                   "mb-6 border-b border-border dark:border-b-text-darkmode-border"
-                }`}>
+                }`}
+              >
                 {post.data.image && (
                   <Image
                     class="mr-3 h-[85px] w-[85px] rounded-full object-cover"
@@ -147,7 +152,8 @@ const categoriesWithPostsCount = catagories.map((category) => {
                   <h3 class="h5 mb-2">
                     <a
                       href={`/${post_folder}/${post.id}`}
-                      class="block hover:text-primary dark:hover:text-darkmode-primary">
+                      class="block hover:text-primary dark:hover:text-darkmode-primary"
+                    >
                       {post.data.title}
                     </a>
                   </h3>
@@ -175,6 +181,7 @@ const categoriesWithPostsCount = catagories.map((category) => {
               class="newsletter-input form-input h-12 w-full rounded-3xl border-none bg-light! px-5! py-3! pr-12! text-text-dark placeholder:text-xs dark:bg-darkmode-dark!"
               type="text"
               placeholder="Type And Hit Enter"
+              required
             />
             <DynamicIcon
               icon="FaEnvelope"
@@ -190,7 +197,8 @@ const categoriesWithPostsCount = catagories.map((category) => {
           By Singing Up, You Agree To
           <a
             href={newsletter.privacy_policy_page}
-            class="ml-1 underline decoration-wavy">
+            class="ml-1 underline decoration-wavy"
+          >
             Privacy Policy
           </a>
         </p>
@@ -203,7 +211,7 @@ const categoriesWithPostsCount = catagories.map((category) => {
   // astro:page-load event is fired when the page is loaded
   document.addEventListener("astro:page-load", () => {
     const tabButtons = document.querySelectorAll(
-      "[tab-button]"
+      "[tab-button]",
     ) as NodeListOf<HTMLButtonElement>;
     tabButtons.forEach((button) => {
       button.addEventListener("click", function () {

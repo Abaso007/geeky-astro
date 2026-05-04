@@ -4,8 +4,8 @@
 </h2>
 
 <p align=center>
-  <a href="https://github.com/withastro/astro/releases/tag/astro%404.3.3" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=ASTRO&message=4.3&color=000&logo=astro" />
+  <a href="https://github.com/withastro/astro/releases/tag/astro%406.2.1" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=ASTRO&message=6.2.1&color=000&logo=astro" />
   </a>
 
   <a href="https://github.com/statichunt/geeky-astro/blob/main/LICENSE">
@@ -17,8 +17,7 @@
     <img src="https://img.shields.io/github/contributors/statichunt/geeky-astro" alt="contributors"></a>
 </p>
 
-![geeky](https://statichunt-images.netlify.app/themes/hugo-geeky.png)
-
+![geeky](https://images.statichunt.com/themes/astro-geeky.png)
 
 ## Key Features
 
@@ -34,6 +33,7 @@
 - Images Optimized With @astro/image
 
 <!-- installation -->
+
 ## Installation
 
 After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. You can view the package.json file to see which scripts are included.
@@ -67,6 +67,7 @@ After finishing all the customization, you can create a production build by runn
 ```
 npm run build
 ```
+
 <!-- edit with sitepins -->
 
 ## 📝 Edit Content with CMS
@@ -82,12 +83,14 @@ Click the Edit with Sitepins button below and follow the on-screen instructions 
   </a>
 
 <!-- reporting issue -->
+
 ## Reporting Issues
 
 We use GitHub Issues as the official bug tracker for this Template. Please Search [existing issues](https://github.com/statichunt/geeky-astro/issues). It’s possible someone has already reported the same problem..
 If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/statichunt/geeky-astro/issues).
 
 <!-- licence -->
+
 ## License
 
 Copyright (c) 2019 - Present, Designed & Developed by [statichunt](https://statichunt.com)

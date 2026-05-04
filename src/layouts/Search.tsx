@@ -27,7 +27,7 @@ const Search = ({ searchList }: Props) => {
   const [inputVal, setInputVal] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputVal(e.currentTarget.value);
   };
 

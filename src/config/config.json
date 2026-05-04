@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Geeeky Astro",
+    "title": "Geeky Astro",
     "base_url": "https://example.com",
     "base_path": "/",
     "trailing_slash": false,

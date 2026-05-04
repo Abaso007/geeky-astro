@@ -5,13 +5,14 @@
       "url": "/"
     },
     {
+      "name": "Posts",
+      "url": "/posts"
+    },
+    {
       "name": "About",
       "url": "/about"
     },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
+
     {
       "name": "Contact",
       "url": "/contact"
@@ -21,6 +22,10 @@
       "url": "",
       "hasChildren": true,
       "children": [
+        {
+          "name": "Elements",
+          "url": "/elements"
+        },
         {
           "name": "Categories",
           "url": "/categories"

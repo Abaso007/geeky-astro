@@ -3,9 +3,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import AutoImport from "astro-auto-import";
-import { defineConfig, fontProviders,sharpImageService } from "astro/config";
-import remarkCollapse from "remark-collapse";
-import remarkToc from "remark-toc";
+import { defineConfig, fontProviders, sharpImageService } from "astro/config";
 import config from "./src/config/config.json";
 import theme from "./src/config/theme.json";
 
@@ -71,15 +69,6 @@ export default defineConfig({
     mdx(),
   ],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
-    ],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
